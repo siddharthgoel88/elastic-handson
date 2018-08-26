@@ -9,9 +9,10 @@ Run the following script to download and install Elasticsearch and Kibana on you
 ```
 bash ./download.sh
 ```
+With this you will have Elasticsearch and Kibana downloaded to your {{~/kiasutech/elastic/Downloads/}}.
 
 ### Starting Elasticsearch
-Now you have Elasticsearch and Kibana downloaded to your {{~/kiasutech/elastic/Downloads/}}. Let get them running.
+Let get Elasticsearch running.
 ```
 sudo su
 ulimit -n 65536
@@ -45,8 +46,12 @@ It should return you the status like :
   },
   "tagline" : "You Know, for Search"
 }
-
 ```
-
-## Elasticsearch
-
+### Starting Kibana
+Lets get Kibana running.
+```
+cd ~/kiasutech/elastic/Downloads/kibana-*/
+vim config/kibana.yml # uncomment server.host property and set it to 0.0.0.0
+./bin/kibana
+```
+Go ahead and access your kibana instance at `http://localhost:5601` in your favourite browser (I mean Google Chrome).
