@@ -4,6 +4,11 @@ PUT /sidfanclub?pretty
 GET /_cat/indices?v
 ```
 
+## Index exists
+```
+HEAD sidfanclub
+```
+
 ## Delete an index
 ```
 DELETE sidfanclub
@@ -19,7 +24,7 @@ PUT sidfanclub
     "number_of_replicas": 1
   }, 
   "mappings" : {
-      "mahtype-mahrulz" : {
+      "_doc" : {
           "properties" : {
               "firstname" : { 
                 "type" : "text",
@@ -37,14 +42,15 @@ PUT sidfanclub
                   }
                 }
               },
-              "age" : {
+              "height_in_cm" : {
                 "type" : "integer"
               },
               "comment" : {
                 "type" : "text"
               },
               "dob" : {
-                "type" : "date"
+                "type" : "date",
+                "format": "yyyy-MM-dd"
               }
           }
       }
@@ -72,7 +78,7 @@ PUT _template/sid_template
     "number_of_replicas": 1
   },
   "mappings": {
-      "mahtype-mahrulz" : {
+      "_doc" : {
           "properties" : {
               "firstname" : { 
                 "type" : "text",
@@ -90,17 +96,38 @@ PUT _template/sid_template
                   }
                 }
               },
-              "age" : {
+              "height_in_cm" : {
                 "type" : "integer"
               },
               "comment" : {
                 "type" : "text"
               },
               "dob" : {
-                "type" : "date"
+                "type" : "date",
+                "format": "yyyy-MM-dd"
               }
           }
       }
   }
 }
+```
+
+## Template exists
+```
+HEAD _template/sid_template
+```
+
+## Get template
+To get a specific template
+```
+GET /_template/sid_template
+```
+To get all templates
+```
+GET /_template
+```
+
+## Delete template
+```
+DELETE /_template/sid_template
 ```
