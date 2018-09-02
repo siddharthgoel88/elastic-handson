@@ -109,7 +109,7 @@ GET bank/_search
 ## Pipeline aggregations
 Aggregations that aggregate the output of other aggregations and their associated metrics.
 
-### Avg bucket aggregation
+### Max bucket aggregation
 ```
 GET bank/_search
 {
