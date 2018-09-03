@@ -131,3 +131,5 @@ GET /_template
 ```
 DELETE /_template/sid_template
 ```
+
+[Next >>>](02-document.md)

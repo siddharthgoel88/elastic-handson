@@ -17,7 +17,7 @@ GET /_cat/nodes?v
 GET /_cat/indices?v
 ```
 
-### Tutorials
+### Hands-on topics
 [Indices](01-indices.md)
 
 [Document](02-document.md)

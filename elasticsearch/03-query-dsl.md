@@ -170,3 +170,5 @@ GET sidfanclub/_search
   }
 }
 ```
+
+[Next >>>](04-aggregation.md)
