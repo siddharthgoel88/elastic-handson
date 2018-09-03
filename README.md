@@ -55,3 +55,6 @@ vim config/kibana.yml # uncomment server.host property and set it to 0.0.0.0
 ./bin/kibana
 ```
 Go ahead and access your kibana instance at `http://localhost:5601` in your favourite browser (I mean Google Chrome).
+
+### Hands-on
+[Elasticsearch Handson](elasticsearch/README.md)
